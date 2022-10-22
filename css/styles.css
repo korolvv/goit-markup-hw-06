@@ -372,7 +372,6 @@ header .container {
 	width: 44px;
 	height: 44px;
 	background-color: transparent;
-	transition: color, fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-icon {
@@ -389,6 +388,11 @@ header .container {
 	width: inherit;
 	height: 100%;
 	border-radius: 100%;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-social-icon {
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social li a:hover,
@@ -411,15 +415,23 @@ header .container {
 	justify-content: center;
 }
 
+.clients li {
+	transition: border-color, fill, 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .clients li a {
 	border: 1px solid #afb1b8;
 	border-radius: 4px;
-	transition: border, fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients li:hover,
+.clients-icon {
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients li a:hover,
 .clients li a:focus {
-	border: 1px solid var(--hover-color);
+	border-color: var(--hover-color);
 }
 
 .clients li:hover .clients-icon,
